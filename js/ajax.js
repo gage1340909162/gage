@@ -7,11 +7,20 @@ function Ajax(opt) {
         error: null
     };
     var settings = extend({}, defaults, opt);
+    if (Object.prototype.toString.call(settings.data) === "[object Object]") {
+        var obj = settings.data;
+        var str = "";
+        for (var i in obj) {
+            str += k + "=" + obj[k] + "&";
+        }
+        settings.data = str.slice(0, -1);
+    }
     var xml = new XMLHttpRequest() || new ActiveXObject("Microsoft.XMLHTTP");
     var getData = "";
     if (settings.data && settings.data === "get") {
-        getData = "?" + encodeURL(settings.data);
+        getData = "?" + encodeURI(settings.data);
     }
+
     xml.open(settings.type, settings.url + getData, settings.async);
     xml.onreadystatechange = function() {
         if (xml.readyState === 4) {
@@ -19,6 +28,11 @@ function Ajax(opt) {
                 settings.success(JSON.parse(xml.reponseText));
             }
         }
+    }
+    var postData = null;
+    if (settings.data && settings.type === 'post') {
+        postData = encodeURI(settings.data);
+        xml.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
     }
     xml.send(settings.data);
 }
