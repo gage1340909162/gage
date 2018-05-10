@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="swiper/swiper.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + "px";
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="head">
+            <h2 class="top"><span class="glyphicon glyphicon-menu-left"></span>无连接<span><i class="glyphicon glyphicon-th-list"></i><i class="glyphicon glyphicon-modal-window"></i></span></h2>
+            <nav class="nav">
+                <dl class="active">
+                    <dt class="glyphicon glyphicon-off"></dt>
+                    <dd>电源</dd>
+                </dl>
+                <dl>
+                    <dt class="glyphicon glyphicon-home"></dt>
+                    <dd>首页</dd>
+                </dl>
+                <dl>
+                    <dt class="glyphicon glyphicon-align-justify"></dt>
+                    <dd>菜单</dd>
+                </dl>
+                <dl>
+                    <dt class="glyphicon glyphicon-blackboard"></dt>
+                    <dd>截屏</dd>
+                </dl>
+            </nav>
+        </header>
+        <main class="main swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">电源</li>
+                <li class="swiper-slide">首页</li>
+                <li class="swiper-slide">菜单</li>
+                <li class="swiper-slide">截屏</li>
+            </ul>
+        </main>
+        <footer class="foot">
+            <span class="glyphicon glyphicon-th-large"></span>
+            <span class="glyphicon glyphicon-share-alt"></span>
+        </footer>
+    </div>
+    <script src="swiper/swiper.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        new Swiper(".main");
+    </script>
+</body>
+
+</html>

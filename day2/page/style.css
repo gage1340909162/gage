@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body,
+html,
+.wrap {
+    width: 100%;
+    height: 100%;
+    font-size: .32rem;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    background: #f0eff0;
+    overflow: hidden;
+}
+
+.head {
+    width: 100%;
+}
+
+.top {
+    margin: 0;
+    padding: 0;
+    height: .9rem;
+    position: relative;
+    text-align: center;
+    line-height: .9rem;
+    font-size: .36rem;
+}
+
+.top span:first-child {
+    position: absolute;
+    left: .3rem;
+    font-size: .32rem;
+    line-height: .9rem;
+}
+
+.top span:last-child {
+    position: absolute;
+    right: .1rem;
+    font-size: .32rem;
+    line-height: .9rem;
+}
+
+.top span:last-child i {
+    padding: 0 .15rem;
+}
+
+.nav {
+    height: 2.1rem;
+    border-bottom: .01rem solid #ccc;
+    display: flex;
+}
+
+.nav dl {
+    flex: 1;
+    text-align: center;
+}
+
+.nav dl dt {
+    width: .9rem;
+    height: .9rem;
+    border: .01rem solid #ccc;
+    margin: 0 auto;
+    box-shadow: .03rem .03rem .03rem #ccc, -.03rem .03rem .03rem #ccc, .03rem -.03rem .03rem #ccc, -.03rem -.03rem .03rem #ccc;
+    line-height: .9rem;
+    font-size: .4rem;
+    border-radius: 50%;
+}
+
+.nav dl.active dt {
+    color: #f00;
+}
+
+.nav dl dd {
+    line-height: .6rem;
+    font-size: .28rem;
+}
+
+.main {
+    flex: 1;
+}
+
+.main ul li {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 1rem;
+}
+
+.foot {
+    width: 100%;
+    height: 3rem;
+    border-top: .01rem solid #ccc;
+    position: relative;
+}
+
+.foot span:first-child {
+    position: absolute;
+    top: 50%;
+    left: .9rem;
+    transform: translate3d(0, -50%, 0);
+    width: .7rem;
+    height: .7rem;
+    border: .01rem solid #ccc;
+    margin: 0 auto;
+    box-shadow: .03rem .03rem .03rem #ccc, -.03rem .03rem .03rem #ccc, .03rem -.03rem .03rem #ccc, -.03rem -.03rem .03rem #ccc;
+    line-height: .7rem;
+    font-size: .34rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.foot span:last-child {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    width: 3.1rem;
+    height: .7rem;
+    border: .01rem solid #ccc;
+    margin: 0 auto;
+    box-shadow: .03rem .03rem .03rem #ccc, -.03rem .03rem .03rem #ccc, .03rem -.03rem .03rem #ccc, -.03rem -.03rem .03rem #ccc;
+    line-height: .7rem;
+    font-size: .34rem;
+    border-radius: .4rem;
+    text-align: center;
+}
