@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <script>
+        var p = document.querySelector("p");
+
+        function change(str) {
+            var str1 = str.slice(6, -4);
+            p.innerHTML = str.slice(0, 6) + "<b>" + str1 + "</b>" + "****";
+        }
+        change("411424199602012414");
+    </script>
+</body>
+
+</html>
